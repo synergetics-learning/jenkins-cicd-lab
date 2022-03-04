@@ -1,0 +1,35 @@
+version: '3.5'
+
+services:
+  tomcat:
+    image: mahendrshinde/tomcat-cd
+    volumes:
+      - type: volume
+        source: catalinaHome
+        target: /usr/local/tomcat
+    networks:
+      net1:
+    ports:
+      - 9000:8080
+
+  jenkins:
+    image: mahendrshinde/jenkins
+    volumes:
+      - type: volume
+        source: jenkinsHome
+        target: /var/jenkins_home
+    networks:
+      net1:
+    ports:
+      - 10000:8080
+
+volumes:
+  jenkinsHome:
+  catalinaHome:
+
+networks:
+  net1:
+    ipam:
+      driver: default
+      config:
+        - subnet: 10.0.10.0/24
