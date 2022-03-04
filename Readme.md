@@ -44,14 +44,14 @@ Deploy Jenkins and Tomcat containers in group. Tomcat would be used as "deployme
 	Project-Name: Job1
 	Project-Type: Freestyle 
 	Source-Control:
-		git: https://github.com/mahendra-shinde/ci-servlet-demo
+	  git: https://github.com/mahendra-shinde/ci-servlet-demo
 	Build-Triggers:
-		Poll-SCM: 
-			Schedule: " H/2 * * * * "
+	  Poll-SCM: 
+	    Schedule: " H/2 * * * * "
 	Build:
-		Invoke top-level Maven Target:
-			Maven-Version: M3
-			Goals: package
+	  Invoke top-level Maven Target:
+	    Maven-Version: M3
+	    Goals: package
 	```
 
 1.	Click save button and then use `Build Now`
