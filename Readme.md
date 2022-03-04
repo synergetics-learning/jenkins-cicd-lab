@@ -62,11 +62,11 @@ Deploy Jenkins and Tomcat containers in group. Tomcat would be used as "deployme
 
 1.	Click on "Available" Tab and then search and install "deploy to container" plugin.
 
-	![Plugin Intallation1](./images/plugins-deploy.png
+	![Plugin Intallation 1](images/plugins-deploy.png)
 
 1.	While installing the new plugin, make sure you `check` the option to `restart jenkins after plugin is installed`.
 
-	![Plugin installation2](./images/plugins-deploy2.png)
+	![Plugin installation2](images/plugins-deploy2.png)
 
 1.	Go Back to `Job1` and click `Configure` button.
 
@@ -98,7 +98,7 @@ Deploy Jenkins and Tomcat containers in group. Tomcat would be used as "deployme
 1.	Now, set the Tomcat Manager URL to `http://tomcat:8080/manager/text` and save the job.
 	
 	> The Tomcat Manager URL set to http://tomcat:8080/manager/text which is a private address only accessible to `jenkins` container as it is in same private network as `tomcat` container.
-	W
+	
 
 	![Tomcat Manager](images/deploy5.png)
 
