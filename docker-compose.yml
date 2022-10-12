@@ -13,7 +13,7 @@ services:
       - 9000:8080
 
   jenkins:
-    image: mahendrshinde/jenkins
+    image: mahendrshinde/jenkins:lts
     volumes:
       - type: volume
         source: jenkinsHome
